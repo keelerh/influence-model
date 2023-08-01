@@ -1,0 +1,44 @@
+cff-version: 1.2.0
+title: influence-model
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Keeley
+    family-names: Erhardt
+    email: keeley@mit.edu
+    affiliation: MIT Media Lab
+    orcid: 'https://orcid.org/0000-0002-1341-5569'
+repository-code: 'https://github.com/keelerh/influence-model'
+abstract: >-
+  A Python implementation of the influence model, a
+  generative model that describes the interactions between
+  networked Markov chains
+keywords:
+  - python
+  - markov-chain
+  - generative-model
+  - influence-models
+license: MIT
+version: 0.1.0
+date-released: '2023-08-01'
+preferred-citation:
+  type: article
+  authors:
+  - family-names: "Erhardt"
+    given-names: "Keeley"
+    orcid: "https://orcid.org/0000-0002-1341-5569"
+  - family-names: "Pentland"
+    given-names: "Alex"
+    orcid: "https://orcid.org/0000-0002-8053-9983"
+  doi: "10.0000/00000"
+  journal: "Computational and Mathematical Organization Theory"
+  month: 9
+  start: 1
+  end: 10
+  title: "Hidden Messages: Mapping Nations’ Media Campaigns"
+  issue: 3
+  volume: 29
+  year: 2023
+  
