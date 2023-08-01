@@ -3,9 +3,9 @@ influence-model
 
 `influence_model` is a Python implementation of the influence model, a generative model that describes the interactions between networked Markov chains.
 
-**Why _influence_model_?** It provides an efficient and well-documented implementation of Asavathiratham's influence model and supports defining new influence models as well as generating observations by applying the model's evolution equations.
+**Why _influence_model_?** It provides an efficient and well-documented implementation of Asavathiratham's original influence model and supports defining new influence models as well as generating observations by applying the model's evolution equations.
 
-Install _influence-model_ by: 
+**Installation:** Install _influence-model_ by: 
 
 ```
 pip install influence-model
