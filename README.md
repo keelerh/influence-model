@@ -15,26 +15,26 @@ pip install influence-model
 We define two sites (nodes) in the network, a leader and a follower. The follower always copies the behavior of the leader. Both sites have two possible statuses, `0` or `1`, represented by indicator vectors. We also define a network matrix $D$ and a state-transition matrix $A$ to instantiate the influence model.
 
 ```python
->> import numpy as np
->>
->> from influence.influence_model import InfluenceModel
->> from influence.site import Site
->>
->> leader = Site('leader', np.array([[1], [0]]))
->> follower = Site('follower', np.array([[0], [1]]))
->> D = np.array([
->>     [1, 0],
->>     [1, 0],
->> ])
->> A = np.array([
->>     [.5, .5, 1., 0.],
->>     [.5, .5, 0., 1.],
->>     [.5, .5, .5, .5],
->>     [.5, .5, .5, .5],
->> ])
->> model = InfluenceModel([leader, follower], D, A)
->> initial_state = model.get_state_vector()
->> print(initial_state)
+import numpy as np
+
+from influence_model.influence_model import InfluenceModel
+from influence_model.site import Site
+
+leader = Site('leader', np.array([[1], [0]]))
+follower = Site('follower', np.array([[0], [1]]))
+D = np.array([
+    [1, 0],
+    [1, 0],
+])
+A = np.array([
+    [.5, .5, 1., 0.],
+    [.5, .5, 0., 1.],
+    [.5, .5, .5, .5],
+    [.5, .5, .5, .5],
+])
+model = InfluenceModel([leader, follower], D, A)
+initial_state = model.get_state_vector()
+print(initial_state)
 ```
 
 The initial state of the network is a vector stack of the initial statuses of the two sites.
@@ -49,9 +49,9 @@ The initial state of the network is a vector stack of the initial statuses of th
 Next, we apply the evolution equations of the influence model to progress to the next network state.
 
 ```python
->> next(model)
->> next_state = model.get_state_vector()
->> print(next_state)
+next(model)
+next_state = model.get_state_vector()
+print(next_state)
 ```
 
 We see that the follower has adopted the previous status of the leader.
@@ -63,22 +63,9 @@ We see that the follower has adopted the previous status of the leader.
  [0]]
 ```
 
-This following behavior continues through subsequent iterations.
+This following behavior continues through all subsequent iterations.
 
-```python
->> next(model)
->> next_state = model.get_state_vector()
->> print(next_state)
-```
-
-```python
-[[1]
- [0]
- [0]
- [1]]
-```
-
-If you find this library helpful to your work, please cite the following paper:
+**Acknowledgements:** If you find this library helpful to your work, please cite the following paper:
 
 ```
 @article{Erhardt_Hidden_Messages_Mapping_2023,
