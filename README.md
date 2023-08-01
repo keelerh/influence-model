@@ -13,6 +13,7 @@ pip install influence-model
 
 If you find this library helpful to your work, please cite the following paper:
 
+```
 @article{Erhardt_Hidden_Messages_Mapping_2023,
     author = {Erhardt, Keeley and Pentland, Alex},
     doi = {10.0000/00000},
@@ -24,3 +25,4 @@ If you find this library helpful to your work, please cite the following paper:
     volume = {29},
     year = {2023}
 }
+```
